@@ -7,15 +7,13 @@ import {BribeInitiative} from "./BribeInitiative.sol";
 
 contract BalancerGaugeRewards is BribeInitiative {
     ILiquidityGauge public immutable gauge;
-    uint256 public immutable duration;
 
     event DepositIntoGauge(uint256 amount);
 
-    constructor(address _governance, address _bold, address _bribeToken, address _gauge, uint256 _duration)
+    constructor(address _governance, address _bold, address _bribeToken, address _gauge)
         BribeInitiative(_governance, _bold, _bribeToken)
     {
         gauge = ILiquidityGauge(_gauge);
-        duration = _duration;
     }
 
     /// @notice Governance transfers Bold, and we deposit it into the gauge

@@ -109,8 +109,7 @@ contract ForkedBalancerGaugeRewardsTest is Test {
             address(governance),
             address(lusd),
             address(lqty),
-            address(gauge),
-            604800
+            address(gauge)
         );
 
         initialInitiatives.push(address(balancerGaugeRewards));
