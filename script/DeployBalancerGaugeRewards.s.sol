@@ -15,12 +15,10 @@ contract DeployBalancerGaugeScript is Script {
     // Deployer
     address private deployer;
     uint256 private privateKey;
-    uint256 private nonce;
 
     function setUp() public {
         privateKey = vm.envUint("PRIVATE_KEY");
         deployer = vm.createWallet(privateKey).addr;
-        nonce = vm.getNonce(deployer);
     }
 
     function run() public {
